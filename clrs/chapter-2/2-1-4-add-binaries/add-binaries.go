@@ -1,20 +1,8 @@
-package main
-
-// 0 0 0        -> 0 0
-// 0 1 1        -> 1 0
-// 0 1 0, 0 0 1 -> 0 1
-// 1 1 1        -> 1 1
-
-//    [1, 1, 1]
-//    [1, 1, 1]
-// [1, 1, 1, 1]
+package addbinaries
 
 func xor(a, b bool) bool {
 	return (a || b) && !(a && b)
 }
-
-// 0 c1 -> c1 0
-// 1 c1 -> c1 1
 
 func AddBinaries(a []bool, b []bool) []bool {
 	c := make([]bool, len(a)+1)
